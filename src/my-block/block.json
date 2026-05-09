@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/usa-states-map",
+	"version": "0.1.0",
+	"title": "USA States Map",
+	"category": "design",
+	"icon": "align-pull-left",
+	"description": "Map of US States with availability of a product or service.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "USA States Map"
+		},
+		"listTitle": {
+			"type": "string",
+			"default": "Available States"
+		},
+		"stateSearch": {
+			"type": "string",
+			"default": ""
+		},
+		"selectedStates": {
+			"type": "array",
+			"default": []
+		},
+		"showStateList": {
+			"type": "boolean",
+			"default": true
+		},
+		"activeStateColor": {
+			"type": "string",
+			"default": "#16a34a"
+		},
+		"defaultStateColor": {
+			"type": "string",
+			"default": "#6b7280"
+		}
+	},
+	"textdomain": "my-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

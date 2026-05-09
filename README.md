@@ -137,20 +137,6 @@ usa-states-map/
 
 ---
 
-## Roadmap
-
-Planned improvements:
-
-* Region presets
-* Hover tooltips
-* Advanced styling presets
-* Additional map variations
-* Animation options
-* Accessibility improvements
-* Multi-country support
-
----
-
 ## Author
 
 Evan Hatfield

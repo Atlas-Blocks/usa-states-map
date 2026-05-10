@@ -1,16 +1,13 @@
 <?php
 /**
- * Plugin Name:       My Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Atlas Blocks USA States Map
+ * Description:       Interactive Gutenberg USA states map block with customizable SVG state selection.
  * Version:           0.1.0
- * Requires at least: 6.8
- * Requires PHP:      7.4
- * Author:            The WordPress Contributors
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       my-block
- *
- * @package CreateBlock
+ * Requires at least: 6.1
+ * Requires PHP:      7.0
+ * Author:            Evan Hatfield
+ * License:           MIT
+ * Text Domain:       atlas-blocks-usa-states-map
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
  * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
  */
-function create_block_my_block_block_init() {
-	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+function atlas_blocks_usa_states_map_init() {
+	register_block_type( __DIR__ . '/build/my-block' );
 }
-add_action( 'init', 'create_block_my_block_block_init' );
+add_action( 'init', 'atlas_blocks_usa_states_map_init' );

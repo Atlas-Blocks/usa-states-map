@@ -1,25 +1,31 @@
 /*!*************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/my-block/editor.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************/
-.wp-block-create-block-usa-states-map {
+/* Editor styles for the USA States Map block */
+.wp-block-atlas-blocks-usa-states-map {
   position: relative;
   background: #fff;
   padding: 70px 0 0 0;
 }
-.wp-block-create-block-usa-states-map .maps-block {
+.wp-block-atlas-blocks-usa-states-map .maps-block-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block {
   position: relative;
   background: none;
-  padding: 50px 20px 20px;
+  padding: 50px 0 0;
   border-radius: 12px;
   border: 0px solid #000;
   overflow: visible;
 }
-.wp-block-create-block-usa-states-map .maps-block__media img {
+.wp-block-atlas-blocks-usa-states-map .maps-block__media img {
   display: block;
   width: 100%;
   height: auto;
 }
-.wp-block-create-block-usa-states-map .maps-block__tag {
+.wp-block-atlas-blocks-usa-states-map .maps-block__tag {
   position: absolute;
   top: 20px;
   left: 50%;
@@ -33,7 +39,7 @@
   border: 2px solid #000;
   margin: 0;
 }
-.wp-block-create-block-usa-states-map .maps-block-box__actions {
+.wp-block-atlas-blocks-usa-states-map .maps-block-box__actions {
   position: absolute;
   top: 12px;
   left: 12px;
@@ -52,12 +58,12 @@
   pointer-events: none;
   transform: translateY(-4px);
 }
-.wp-block-create-block-usa-states-map.is-selected .maps-block-box__actions {
+.wp-block-atlas-blocks-usa-states-map.is-selected .maps-block-box__actions {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__dropdown {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__dropdown {
   border: 1px solid #dcdcde;
   border-radius: 4px;
   background: #fff;
@@ -66,7 +72,7 @@
   overflow-y: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__dropdown-item {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__dropdown-item {
   display: block;
   width: 100%;
   padding: 10px 12px;
@@ -78,13 +84,16 @@
   font-size: 14px;
   transition: background-color 0.15s ease;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__dropdown-item:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__dropdown-item:hover {
   background: #f0f0f0;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__dropdown-item:active {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__dropdown-item:active {
   background: #e0e0e0;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styles for the map image wrapper and SVG */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states {
   margin-top: 24px;
   padding: 24px;
   background: #ffffff;
@@ -95,10 +104,10 @@
   max-height: 260px;
   overflow-y: auto;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states h4 {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states h4 {
   margin: 0 0 20px;
   font-size: 16px;
   font-weight: 600;
@@ -108,7 +117,7 @@
   text-transform: uppercase;
   font-size: 14px;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states ul {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -117,7 +126,7 @@
   gap: 12px;
   justify-content: center;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states li {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,13 +141,13 @@
   position: relative;
   box-sizing: border-box;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__selected-states li:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__selected-states li:hover {
   background: #f1f5f9;
   border-color: #cbd5e1;
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__remove-button {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__remove-button {
   margin-left: 12px;
   background: #ef4444;
   color: #fff;
@@ -156,19 +165,24 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__remove-button:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__remove-button:hover {
   background: #dc2626;
   transform: scale(1.05);
   box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__remove-button:active {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__remove-button:active {
   background: #b91c1c;
   transform: scale(0.95);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor-panel__actions {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styles for the selected states panel 
+  in the editor when a state is selected 
+  */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor-panel__actions {
   margin-top: 16px;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__panel {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__panel {
   background: #ffffff;
   border: 3px solid #000000;
   border-radius: 8px;
@@ -176,13 +190,13 @@
   max-width: 900px;
   margin: 0 auto;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor-panel__header {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor-panel__header {
   margin-bottom: 16px;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor-panel__header h3 {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor-panel__header h3 {
   margin: 0;
 }
-.wp-block-create-block-usa-states-map .maps-block__image-wrapper {
+.wp-block-atlas-blocks-usa-states-map .maps-block__image-wrapper {
   background: linear-gradient(135deg, #1f2937 0%, #334155 100%);
   display: flex;
   justify-content: center;
@@ -191,23 +205,26 @@
   padding: 24px;
   overflow: hidden;
 }
-.wp-block-create-block-usa-states-map .maps-block__image-wrapper svg {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styles for the map image wrapper and SVG */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block__image-wrapper svg {
   display: block;
   width: 100%;
   max-width: 1000px;
   height: auto;
-  transform: translateX(-6%);
+  transform: translateX(-2%);
   shape-rendering: geometricPrecision;
 }
-.wp-block-create-block-usa-states-map .maps-block__image-wrapper svg path.is-active {
+.wp-block-atlas-blocks-usa-states-map .maps-block__image-wrapper svg path.is-active {
   fill: #16a34a;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styles for the selected states panel and list */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected {
   margin-top: 16px;
   width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 12px;
   overflow: hidden;
   background: #fafbfc;
@@ -215,7 +232,7 @@
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__title {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__title {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
@@ -224,7 +241,7 @@
   letter-spacing: 0.025em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__count {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__count {
   display: inline-block;
   margin-left: 8px;
   padding: 2px 8px;
@@ -235,7 +252,7 @@
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__header {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__header {
   background: linear-gradient(135deg, #1f2937 0%, #334155 100%);
   padding: 20px 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -246,14 +263,14 @@
   justify-content: space-between;
   gap: 24px;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__header-main {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__header-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   min-width: 0;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__title {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__title {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
@@ -262,7 +279,7 @@
   letter-spacing: 0.025em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__count {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__count {
   display: inline-block;
   padding: 2px 8px;
   background: rgba(255, 255, 255, 0.15);
@@ -272,14 +289,17 @@
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__progress {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styling for the progress bar in the selected states panel */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__progress {
   width: 240px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__progress-label {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__progress-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -288,20 +308,20 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__progress-bar {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__progress-bar {
   height: 10px;
   background: rgba(255, 255, 255, 0.14);
   border-radius: 999px;
   overflow: hidden;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__progress-fill {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__progress-fill {
   height: 100%;
   border-radius: 999px;
   background: linear-gradient(90deg, #22c55e 0%, #4ade80 100%);
   transition: width 0.25s ease;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__header::before {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -311,7 +331,7 @@
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
   pointer-events: none;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__body {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__body {
   background: transparent;
   padding: 32px 24px 24px;
   border-radius: 0 0 20px 20px;
@@ -319,7 +339,7 @@
   max-height: 260px;
   overflow-y: auto;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__body::before {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -328,7 +348,7 @@
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, #e5e7eb 50%, transparent 100%);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__list {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__list {
   list-style: none;
   padding: 0 6px 0 0;
   margin: 0;
@@ -336,7 +356,7 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__item {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__item {
   padding: 8px 12px;
   border-radius: 999px;
   background: #f1f5f9;
@@ -349,7 +369,7 @@
   justify-content: center;
   box-shadow: none;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__item::before {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__item::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -357,15 +377,15 @@
   background: #22c55e;
   margin-right: 8px;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__name {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__name {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__list li:active {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__list li:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-.wp-block-create-block-usa-states-map .maps-block-selected__empty {
+.wp-block-atlas-blocks-usa-states-map .maps-block-selected__empty {
   margin: 20px 0 0;
   color: #64748b;
   font-size: 14px;
@@ -376,16 +396,12 @@
   border-radius: 12px;
   border: 1px solid #e2e8f0;
 }
-.wp-block-create-block-usa-states-map .state {
+.wp-block-atlas-blocks-usa-states-map .state {
   stroke: rgba(88, 88, 88, 0.7);
   stroke-width: 1;
   transition: fill 0.2s ease, stroke 0.2s ease;
 }
-.wp-block-create-block-usa-states-map .state.is-active {
-  fill: #16a34a;
-  stroke: rgba(88, 88, 88, 0.7);
-}
-.wp-block-create-block-usa-states-map .maps-block-editor__clear-states-button {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__clear-states-button {
   background: linear-gradient(135deg, #1f2937, #334155);
   color: #fff;
   border: none;
@@ -396,18 +412,18 @@
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__clear-states-button:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__clear-states-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-row {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-row {
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-bottom: 16px;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-control {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-control {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -415,28 +431,31 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   min-width: 0;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-label {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-label {
   margin: 0 0 10px;
   font-size: 13px;
   font-weight: 600;
   color: #1e293b;
   letter-spacing: 0.01em;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-control .components-circular-option-picker {
+.wp-block-atlas-blocks-usa-states-map {
+  /* Styles for the circular color picker options in the editor for state colors */
+}
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-control .components-circular-option-picker {
   margin-top: 4px;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option {
   transform: scale(1);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option:hover {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option:hover {
   transform: scale(1.08);
 }
-.wp-block-create-block-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option[aria-checked=true] {
+.wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-control .components-circular-option-picker__option[aria-checked=true] {
   box-shadow: 0 0 0 2px #1e293b;
 }
 @media (max-width: 600px) {
-  .wp-block-create-block-usa-states-map .maps-block-editor__color-row {
+  .wp-block-atlas-blocks-usa-states-map .maps-block-editor__color-row {
     grid-template-columns: 1fr;
   }
 }

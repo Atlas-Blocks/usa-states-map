@@ -4,7 +4,7 @@ return array(
 	'my-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/usa-states-map',
+		'name' => 'atlas-blocks/usa-states-map',
 		'version' => '0.1.0',
 		'title' => 'USA States Map',
 		'category' => 'design',
@@ -46,7 +46,7 @@ return array(
 			),
 			'defaultStateColor' => array(
 				'type' => 'string',
-				'default' => '#6b7280'
+				'default' => '#f9f9f9'
 			)
 		),
 		'textdomain' => 'my-block',

@@ -1,26 +1,40 @@
-.wp-block-create-block-usa-states-map {
+/* Editor styles for the USA States Map block */
 
+.wp-block-atlas-blocks-usa-states-map {
+
+	// Base styles
 	position: relative;
 	background: #fff;
 	padding: 70px 0 0 0;
-	
 
+	// Wrapper for centering and max width
+	.maps-block-wrapper {
+		width: 100%;
+		max-width: 900px;
+
+		margin: 0 auto;
+	}
 	
+	// Main block container
 	.maps-block {
 		position: relative;
 		background: none;
-		padding: 50px 20px 20px;
+
+		//spacing in place so tag is positioned slightly above map
+		padding: 50px 0 0;
 		border-radius: 12px;
 		border: 0px solid #000;
-		overflow:visible;
+		overflow: visible;
 	}
 
+	// Media styles
 	.maps-block__media img {
 		display: block;
 		width: 100%;
 		height: auto;
 	}
 
+	// Tag styles for floating tag above map
 	.maps-block__tag {
 		position: absolute;
 		top: 20px;
@@ -36,6 +50,7 @@
 		margin: 0;
 	}
 
+	// Styling for Edit Map button in editor
 	.maps-block-box__actions {
 		position: absolute;
 		top: 12px;
@@ -59,12 +74,14 @@
 		transform: translateY(-4px);
 	}
 
+	// Rule to make Edit Map button visible when block is selected
 	&.is-selected .maps-block-box__actions {
 		opacity: 1;
 		pointer-events: auto;
 		transform: translateY(0);
 	}
 
+	// Styles drop down menu in Editor menu
 	.maps-block-editor__dropdown {
 		border: 1px solid #dcdcde;
 		border-radius: 4px;
@@ -75,6 +92,7 @@
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
+	// Styles for items in the dropdown menu
 	.maps-block-editor__dropdown-item {
 		display: block;
 		width: 100%;
@@ -96,6 +114,9 @@
 		}
 	}
 
+	/* Styles for the map image wrapper and SVG */
+
+
 	.maps-block-editor__selected-states {
 		margin-top: 24px;
 		padding: 24px;
@@ -108,10 +129,12 @@
 		overflow-y: auto;
 	}
 
+	// Subtle hover effect when hovering over the selected states panel in the editor
 	.maps-block-editor__selected-states:hover {
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 	}
 
+	// Styles for the title above the selected states list in the editor1
 	.maps-block-editor__selected-states h4 {
 		margin: 0 0 20px;
 		font-size: 16px;
@@ -123,6 +146,7 @@
 		font-size: 14px;
 	}
 
+	// Styles for the list of selected states in the editor
 	.maps-block-editor__selected-states ul {
 		margin: 0;
 		padding: 0;
@@ -133,6 +157,7 @@
 		justify-content: center;
 	}
 
+	// Styles for each selected state item in the editor
 	.maps-block-editor__selected-states li {
 		display: flex;
 		align-items: center;
@@ -149,6 +174,7 @@
 		box-sizing: border-box;
 	}
 
+	// Hover effect for selected state items in the editor
 	.maps-block-editor__selected-states li:hover {
 		background: #f1f5f9;
 		border-color: #cbd5e1;
@@ -156,6 +182,7 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	}
 	
+	// Remove button on each selected state item in the editor to make it a red x
 	.maps-block-editor__remove-button {
 		margin-left: 12px;
 		background: #ef4444;
@@ -175,21 +202,29 @@
 		flex-shrink: 0;
 	}
 
+	// Hover effect for the remove button on each selected state item in the editor
 	.maps-block-editor__remove-button:hover {
 		background: #dc2626;
 		transform: scale(1.05);
 		box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
 	}
 
+	// Active effect for the remove button to make it look like it's being pressed
 	.maps-block-editor__remove-button:active {
 		background: #b91c1c;
 		transform: scale(0.95);
 	}
 
+	/* Styles for the selected states panel 
+	in the editor when a state is selected 
+	*/
+	
+	// Adds a light buffer above the Edit Map button
 	.maps-block-editor-panel__actions {
 		margin-top: 16px;
 	}
 
+	// Styles the entire panel that appears when you click Edit Map in the editor
 	.maps-block-editor__panel {
 		background: #ffffff;
 		border: 3px solid #000000;
@@ -207,6 +242,7 @@
 		margin: 0;
 	}
 
+	// Styles the area that holds the map image
 	.maps-block__image-wrapper {
 		background: linear-gradient(135deg, #1f2937 0%, #334155 100%);
 		display: flex;
@@ -217,12 +253,15 @@
 		overflow: hidden;
 	}
 
+	/* Styles for the map image wrapper and SVG */
+
+	// Sets width and a slight transformation on map to make it looked centered
 	.maps-block__image-wrapper svg {
 		display: block;
 		width: 100%;
 		max-width: 1000px;
 		height: auto;
-		transform: translateX(-6%);
+		transform: translateX(-2%);
 		shape-rendering: geometricPrecision;
 	}
 
@@ -230,12 +269,11 @@
 		fill: #16a34a;
 	}
 
+	/* Styles for the selected states panel and list */
+
 	.maps-block-selected {
 		margin-top: 16px;
 		width: 100%;
-		max-width: 900px;
-		margin-left: auto;
-		margin-right: auto;
 		border-radius: 12px;
 		overflow: hidden;
 		background: #fafbfc;
@@ -244,7 +282,6 @@
 			0 8px 16px rgba(0, 0, 0, 0.04);
 		border: 1px solid #e5e7eb;
 		transition: all 0.3s ease;
-		
 	}
 
 	.maps-block-selected__title {
@@ -257,6 +294,7 @@
 		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	}
 
+	// For the tag that shows the number of selected states in the editor when a state is selected
 	.maps-block-selected__count {
 		display: inline-block;
 		margin-left: 8px;
@@ -313,6 +351,8 @@
 		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	}
 
+	/* Styling for the progress bar in the selected states panel */
+
 	.maps-block-selected__progress {
 		width: 240px;
 		flex-shrink: 0;
@@ -346,6 +386,8 @@
 		transition: width 0.25s ease;
 	}
 
+
+	// Adds a subtle diagonal pattern to the header of the selected states panel in the editor
 	.maps-block-selected__header::before {
 		content: '';
 		position: absolute;
@@ -385,6 +427,7 @@
 		gap: 12px;
 	}
 
+	// Giving a subtle green dot before each selected state item in the editor to indicate it's active
 	.maps-block-selected__item {
 		padding: 8px 12px;
 		border-radius: 999px;
@@ -422,6 +465,7 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	}
 
+	// Gives styling for when selected states list is empty to encourage users to select states
 	.maps-block-selected__empty {
 		margin: 20px 0 0;
 		color: #64748b;
@@ -433,18 +477,15 @@
 		border-radius: 12px;
 		border: 1px solid #e2e8f0;
 	}
-
+	
+	// Makes state svg paths more visually distinct and adds a smooth transition
 	.state {
 		stroke: rgba(88, 88, 88, 0.7);
 		stroke-width: 1;
 		transition: fill 0.2s ease, stroke 0.2s ease;
 	}
 
-	.state.is-active {
-		fill: #16a34a;
-		stroke: rgba(88, 88, 88, 0.7);
-	}
-
+	// Formatting for button that allows users to clear all selected states in the editor at once
 	.maps-block-editor__clear-states-button {
 		background: linear-gradient(135deg, #1f2937, #334155);
 		color: #fff;
@@ -486,6 +527,8 @@
 		color: #1e293b;
 		letter-spacing: 0.01em;
 	}
+	
+	/* Styles for the circular color picker options in the editor for state colors */
 
 	.maps-block-editor__color-control .components-circular-option-picker {
 		margin-top: 4px;
@@ -503,6 +546,8 @@
 	.maps-block-editor__color-control .components-circular-option-picker__option[aria-checked="true"] {
 		box-shadow: 0 0 0 2px #1e293b;
 	}
+
+	// Responsive styles for the editor to stack the color pickers on smaller screens
 
 	@media (max-width: 600px) {
 		.maps-block-editor__color-row {

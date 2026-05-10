@@ -22,11 +22,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _statePaths__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./statePaths */ "./src/my-block/statePaths.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+/**
+ * Edit function for the USA States Map block.
+ * This component renders the block in the editor and provides the UI for editing its attributes.
+ */
+
+// Import React state hook for managing local editor state
 
 
 
+// Import Gutenberg block utilities and editable rich text component
 
 
+
+// Import Gutenberg UI components used in the editor panel
+
+
+
+// Import array of state names used for searching/filtering
+
+
+
+// Import SVG path data for each state to render the map
+
+
+/* Main edit function for the block, 
+which renders the block in the editor and provides the UI for editing its attributes */
 
 function Edit({
   attributes,
@@ -42,6 +63,8 @@ function Edit({
     defaultStateColor = '#f9f9f9'
   } = attributes;
   const [isEditing, setIsEditing] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+
+  // Function for filtering states based on search input and exclude already selected states
   const filteredStates = _states__WEBPACK_IMPORTED_MODULE_3__["default"].filter(state => state.toLowerCase().includes(stateSearch.toLowerCase()) && !selectedStates.includes(state));
 
   /**
@@ -58,11 +81,19 @@ function Edit({
       stateSearch: ''
     });
   };
+
+  /**
+   * Removes a state from the selected states list.
+   * @param {*} stateToRemove 
+   */
+
   const removeState = stateToRemove => {
     setAttributes({
       selectedStates: selectedStates.filter(state => state !== stateToRemove)
     });
   };
+
+  // Main return statement that conditionally renders either the editing panel or the block preview based on isEditing state
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
     children: isEditing ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -157,7 +188,10 @@ function Edit({
           children: "Done"
         })
       })]
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    }) :
+    /*#__PURE__*/
+    /* Block preview that shows the map with selected states highlighted and the list of selected states if enabled */
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "maps-block-wrapper",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
         className: "maps-block",
@@ -172,7 +206,9 @@ function Edit({
               id: state.id,
               "data-name": state.name,
               className: `state ${selectedStates.includes(state.name) ? 'is-active' : ''}`,
-              d: state.d,
+              d: state.d
+              /* Apply active or default color based on whether the state is selected, 
+              with a smooth transition defined in CSS */,
               style: {
                 fill: selectedStates.includes(state.name) ? activeStateColor : defaultStateColor
               }
@@ -283,8 +319,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _statePaths__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./statePaths */ "./src/my-block/statePaths.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* **
+ * Save function for the USA States Map block.
+ * This component defines how the block's content is saved and rendered on the front end.
+ *
+ */
+
+// Import Gutenberg block utilities for saving block content
 
 
+// Import SVG path data for each state to render the map
+
+
+// Main save function for the block, which defines how the block's content is saved and rendered on the front end
 
 function save({
   attributes
@@ -689,7 +736,7 @@ module.exports = window["wp"]["element"];
   \*********************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/usa-states-map","version":"0.1.0","title":"USA States Map","category":"design","icon":"align-pull-left","description":"Map of US States with availability of a product or service.","supports":{"html":false,"align":["wide","full"]},"attributes":{"title":{"type":"string","default":"USA States Map"},"listTitle":{"type":"string","default":"Available States"},"stateSearch":{"type":"string","default":""},"selectedStates":{"type":"array","default":[]},"showStateList":{"type":"boolean","default":true},"activeStateColor":{"type":"string","default":"#16a34a"},"defaultStateColor":{"type":"string","default":"#6b7280"}},"textdomain":"my-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"atlas-blocks/usa-states-map","version":"0.1.0","title":"USA States Map","category":"design","icon":"align-pull-left","description":"Map of US States with availability of a product or service.","supports":{"html":false,"align":["wide","full"]},"attributes":{"title":{"type":"string","default":"USA States Map"},"listTitle":{"type":"string","default":"Available States"},"stateSearch":{"type":"string","default":""},"selectedStates":{"type":"array","default":[]},"showStateList":{"type":"boolean","default":true},"activeStateColor":{"type":"string","default":"#16a34a"},"defaultStateColor":{"type":"string","default":"#f9f9f9"}},"textdomain":"my-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ }
 

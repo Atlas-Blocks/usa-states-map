@@ -1,6 +1,16 @@
+/* **
+ * Save function for the USA States Map block.
+ * This component defines how the block's content is saved and rendered on the front end.
+ *
+ */
+
+// Import Gutenberg block utilities for saving block content
 import { useBlockProps } from '@wordpress/block-editor';
+
+// Import SVG path data for each state to render the map
 import { statesPaths } from './statePaths';
 
+// Main save function for the block, which defines how the block's content is saved and rendered on the front end
 export default function save( { attributes } ) {
 	const {
 		title = '',
@@ -13,9 +23,17 @@ export default function save( { attributes } ) {
 
 	return (
 		<div { ...useBlockProps.save() }>
+
+			{/* Wrapper for the entire block content on the front end, 
+			including the map and optional selected states list */ }
+
 			<div className="maps-block-wrapper">
 				<div className="maps-block">
 					<h2 className="maps-block__tag">{ title }</h2>
+
+					{/* SVG map rendering with paths for each state, 
+					where selected states are filled with activeStateColor 
+					and others with defaultStateColor */ }
 
 					<div className="maps-block__image-wrapper">
 						<svg viewBox="0 0 1000 589">
@@ -37,6 +55,8 @@ export default function save( { attributes } ) {
 					</div>
 				</div>
 
+				{/* Conditionally render the selected states list and progress bar if showStateList is true */ }
+
 				{ showStateList && (
 					<div className="maps-block-selected">
 						<div className="maps-block-selected__header">
@@ -49,6 +69,7 @@ export default function save( { attributes } ) {
 								</span>
 							</div>
 
+							{ /* Progress bar showing the percentage of selected states in bar and label */ }
 							<div className="maps-block-selected__progress">
 								<div className="maps-block-selected__progress-label">
 									<span>{ selectedStates.length } of 50 States</span>
@@ -66,6 +87,8 @@ export default function save( { attributes } ) {
 							</div>
 						</div>
 
+						{ /* Body of the selected states list, 
+						showing either the list of selected states or a message if none are selected */ }
 						<div className="maps-block-selected__body">
 							{ selectedStates.length > 0 ? (
 								<div className="maps-block-selected__list">
